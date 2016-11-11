@@ -15,7 +15,7 @@
    limitations under the License.
 */
 
-var debugmode = false;
+var debugmode = true;
 
 var states = Object.freeze({
    SplashScreen: 0,
@@ -166,8 +166,8 @@ function gameloop() {
    
    //create the bounding box
    var box = document.getElementById('player').getBoundingClientRect();
-   var origwidth = 24.0;
-   var origheight = 24.0;
+   var origwidth = 15.0;
+   var origheight = 22.0;
    
    var boxwidth = origwidth - (Math.sin(Math.abs(rotation) / 90) * 8);
    var boxheight = (origheight + box.height) / 2;
