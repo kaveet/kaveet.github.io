@@ -10,7 +10,11 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 window.sr = ScrollReveal();
-sr.reveal('.body-section', { duration: 600, scale: 1, delay: 80});
+sr.reveal('#about-me', { duration: 600, scale: 1, delay: 80});
+sr.reveal('.body-header', { duration: 600, scale: 1, delay: 80});
+sr.reveal('.skill-section', { duration: 600, scale: 1, delay: 80});
+sr.reveal('.experience-entry', { duration: 600, scale: 1, delay: 80});
+
 
 particlesJS.load('particles-js', 'particles.json', function() {
 });
