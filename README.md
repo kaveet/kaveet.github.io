@@ -136,7 +136,7 @@ kaveet.github.io/
 │       └── docs.yml          # GitHub Actions workflow
 ├── docs/
 │   ├── conf.py              # Sphinx configuration
-│   ├── index.rst            # Main documentation file
+│   ├── index.md             # Main documentation file
 │   ├── Makefile             # Build commands for Unix
 │   └── make.bat             # Build commands for Windows
 ├── .gitignore
@@ -148,9 +148,9 @@ kaveet.github.io/
 
 ## Writing Documentation
 
-Documentation is written in reStructuredText (`.rst`) format. Add new pages in the `docs/` directory and reference them in `docs/index.rst` using the `toctree` directive.
+Documentation is written in Markdown (`.md`) format using MyST-Parser. Add new pages in the `docs/` directory and reference them in `docs/index.md` using the `toctree` directive.
 
-For more information on reStructuredText syntax, see the [Sphinx documentation](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html).
+For more information on MyST-Parser Markdown syntax, see the [MyST-Parser documentation](https://myst-parser.readthedocs.io/).
 
 ## License
 
