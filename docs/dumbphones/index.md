@@ -6,5 +6,4 @@ This section contains information about various dumbphones.
 :maxdepth: 2
 
 qin-f21-pro/index
-qin-f1-pro
 ```

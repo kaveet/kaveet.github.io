@@ -1,3 +1,10 @@
 # Qin F21 Pro
 
-This page contains information about the Qin F21 Pro dumbphone.
+```{toctree}
+:maxdepth: 2
+
+about
+hardware-variants
+software-variants
+sellers
+```
