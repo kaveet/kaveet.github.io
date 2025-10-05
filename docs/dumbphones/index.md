@@ -1,9 +1,9 @@
 # Dumbphones
 
-This section contains information about various dumbphones.
+Research on "dumbphones."
 
 ```{toctree}
-:maxdepth: 2
+:maxdepth: 1
 
 qin-f21-pro/index
 ```
