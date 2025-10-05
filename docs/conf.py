@@ -32,3 +32,12 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+
+# Configure "Edit this page" links
+html_context = {
+    'display_github': True,
+    'github_user': 'kaveet',
+    'github_repo': 'kaveet.github.io',
+    'github_version': 'main',
+    'conf_py_path': '/docs/',
+}
