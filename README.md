@@ -12,8 +12,41 @@ This repository contains technical documentation built with [Sphinx](https://www
 
 - Python 3.8 or higher
 - pip (Python package installer)
+- Make (usually pre-installed on Unix-like systems)
 
-### Setup
+### Quick Start with Make
+
+The easiest way to get started is using the provided Makefile:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/kaveet/kaveet.github.io.git
+   cd kaveet.github.io
+   ```
+
+2. Set up the development environment:
+   ```bash
+   make install
+   ```
+   This creates a virtual environment and installs all dependencies.
+
+3. Start the live preview server:
+   ```bash
+   make dev
+   ```
+   This will automatically open http://127.0.0.1:8000 in your browser and rebuild the documentation whenever you make changes.
+
+### Available Make Commands
+
+- `make help` - Show all available commands
+- `make install` - Create virtual environment and install dependencies
+- `make dev` - Start live preview server with auto-reload
+- `make build` - Build the documentation
+- `make clean` - Clean build artifacts
+
+### Manual Setup
+
+If you prefer to set up manually without Make:
 
 1. Clone the repository:
    ```bash
@@ -34,8 +67,12 @@ This repository contains technical documentation built with [Sphinx](https://www
 
 ### Building the Documentation
 
-To build the HTML documentation locally:
+With Make:
+```bash
+make build
+```
 
+Or manually:
 ```bash
 cd docs
 make html
@@ -45,22 +82,27 @@ The generated documentation will be in `docs/_build/html/`. You can open `docs/_
 
 ### Live Preview
 
-To rebuild the documentation automatically when files change, you can use `sphinx-autobuild`:
-
+With Make:
 ```bash
-pip install sphinx-autobuild
-cd docs
-sphinx-autobuild . _build/html
+make dev
 ```
 
-Then open http://127.0.0.1:8000 in your browser.
+Or manually with sphinx-autobuild:
+```bash
+cd docs
+sphinx-autobuild . _build/html --open-browser
+```
 
-**Note**: Make sure your virtual environment is activated when running these commands.
+The live preview server will start at http://127.0.0.1:8000 and automatically reload when you make changes.
 
 ### Cleaning Build Files
 
-To clean all build artifacts:
+With Make:
+```bash
+make clean
+```
 
+Or manually:
 ```bash
 cd docs
 make clean
@@ -98,6 +140,7 @@ kaveet.github.io/
 │   ├── Makefile             # Build commands for Unix
 │   └── make.bat             # Build commands for Windows
 ├── .gitignore
+├── Makefile                 # Root Makefile for development tasks
 ├── requirements.txt         # Python dependencies
 ├── LICENSE
 └── README.md
