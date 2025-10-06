@@ -26,7 +26,6 @@ These modified versions have become extremely popular on marketplaces like AliEx
 
 **What to expect:**
 
-- Bootloader is unlocked (or partially unlocked)
 - Google Play Store and Google Play Services pre-installed
 - ROM claims to be "Google certified" (though this is often questionable)
 - Varying levels of Chinese app removal
