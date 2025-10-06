@@ -1,4 +1,6 @@
-# About the Qin F21 Pro
+# About
+
+{{ mt8766_warning }}
 
 ## Overview
 
@@ -14,7 +16,7 @@ Despite "Xiaomi Qin F21 Pro" branding by some sellers, the device is manufacture
 
 ### Qin F30
 
-The F21 Pro is closely related to the Qin F30, which includes native support for US cellular bands (particularly T-Mobile). Community members have developed methods to enable similar band support on the F21 Pro by porting F30 baseband configurations. See the US band enabling guide for details.
+The F21 Pro is closely related to the Qin F30, which includes native support for US cellular bands (particularly T-Mobile). Community members have developed methods to enable similar band support on the F21 Pro by porting F30 baseband configurations. See the [US band enabling guide](guides/enabling-us-bands) for details.
 
 ## Key Facts
 

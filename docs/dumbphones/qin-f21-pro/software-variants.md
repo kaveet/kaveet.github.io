@@ -1,5 +1,7 @@
 # Software Variants
 
+{{ mt8766_warning }}
+
 The Qin F21 Pro is available with several different software configurations. This guide breaks down the major software variants, common seller terminology, and important considerations around privacy and functionality.
 
 ## Overview of Main Software Variants

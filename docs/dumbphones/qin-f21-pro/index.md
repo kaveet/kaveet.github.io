@@ -1,5 +1,7 @@
 # Qin F21 Pro
 
+{{ mt8766_warning }}
+
 Guides, resources, and tips for living with the Xiaomi/Duoqin Qin F21 Pro.
 
 ```{toctree}
@@ -8,6 +10,6 @@ Guides, resources, and tips for living with the Xiaomi/Duoqin Qin F21 Pro.
 introduction
 hardware-variants
 software-variants
-sellers
+guides/index
 ```
 

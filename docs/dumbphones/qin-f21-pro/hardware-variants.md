@@ -1,5 +1,7 @@
 # Hardware Variants
 
+{{ mt8766_warning }}
+
 The Qin F21 Pro comes in a handful of configurations that differ in memory/storage capacity, color options, and keyboard layouts.
 
 ## Base Specifications
@@ -9,7 +11,7 @@ All Qin F21 Pro variants share these core specs:
 | Component | Specification |
 |-----------|--------------|
 | **Display** | 2.8-inch IPS capacitive touchscreen, 480x640 pixels (portrait) |
-| **Processor** | MediaTek Helio A22 (MT6761), quad-core up to 2.0 GHz |
+| **Processor** | MediaTek Helio A22 (MT6761), quad-core up to 2.0 GHz* |
 | **GPU** | PowerVR Rogue GE8300 |
 | **Rear Camera** | 5MP with autofocus and LED flash |
 | **Battery** | 2,120mAh with 7.5W fast charging (USB Type-C) |
@@ -17,6 +19,8 @@ All Qin F21 Pro variants share these core specs:
 | **Weight** | 102g |
 | **Connectivity** | Wi-Fi, Bluetooth 5.0, GPS, hotspot, infrared remote control |
 | **Audio** | Dual microphones (main + noise reduction) |
+
+*\*Note: Some later F21 Pro units were manufactured with the MT8766 processor instead of the MT6761. This guide covers MT6761 devices only.*
 
 ## What's NOT Included
 
@@ -73,7 +77,7 @@ While not officially designated as different models, F21 Pro units sold in diffe
 
 ### Pre-installed Software
 
-The phone comes in different software configurations that you'll want to pay close attention to. See the Software Variants section for more.
+The phone comes in different software configurations that you'll want to pay close attention to. See the [Software Variants](software-variants) section for more.
 
 ## Cellular Band Support
 
@@ -102,7 +106,7 @@ The F21 Pro can be modified to support additional US bands by flashing modem fil
 
 **LTE Bands**: B2, B4, B12, B13, B17, B66, B71
 
-This modification process is detailed in the "Enabling US Bands" section of this wiki. **However, there's an important caveat from the community**: Some users report that while the phone will display these bands as available in engineering mode after modification, the actual hardware may not fully utilize all bands as effectively as a native F30 device. The modification enables the software to recognize and attempt to use these bands, but real-world signal performance may vary by location and carrier.
+This modification process is detailed in the [Enabling US Bands](guides/enabling-us-bands) guide. **However, there's an important caveat from the community**: Some users report that while the phone will display these bands as available in engineering mode after modification, the actual hardware may not fully utilize all bands as effectively as a native F30 device. The modification enables the software to recognize and attempt to use these bands, but real-world signal performance may vary by location and carrier.
 
 For the best US compatibility, consider:
 

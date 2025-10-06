@@ -15,7 +15,20 @@ author = 'Kaveet Laxmidas'
 
 extensions = [
     'myst_parser',
+    'sphinx_design',
 ]
+
+# MyST Parser configuration
+myst_enable_extensions = [
+    'substitution',
+    'colon_fence',
+]
+
+myst_substitutions = {
+    'mt8766_warning': '''```{warning}
+This guide is for **MT6761 (Helio A22)** devices only. If you have an **MT8766** processor, see the [MT8766 disclaimer](../mt8766-disclaimer) before proceeding.
+```''',
+}
 
 source_suffix = {
     '.rst': 'restructuredtext',
