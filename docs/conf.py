@@ -40,6 +40,11 @@ source_suffix = {
     '.md': 'markdown',
 }
 
+# sphinx-copybutton configuration
+copybutton_prompt_text = r">>> |\.\.\. |\$ "
+copybutton_prompt_is_regexp = True
+copybutton_remove_prompts = True
+
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
