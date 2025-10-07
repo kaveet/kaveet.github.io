@@ -16,6 +16,8 @@ author = 'Kaveet Laxmidas'
 extensions = [
     'myst_parser',
     'sphinx_design',
+    'sphinx_copybutton',
+    'sphinx_prompt',
 ]
 
 # MyST Parser configuration
@@ -26,6 +28,9 @@ myst_enable_extensions = [
 
 myst_substitutions = {
     'mt8766_warning': '''```{warning}
+This guide is for **MT6761 (Helio A22)** devices only. If you have an **MT8766** processor, see the [MT8766 disclaimer](mt8766-disclaimer) before proceeding.
+```''',
+    'mt8766_warning_subdir': '''```{warning}
 This guide is for **MT6761 (Helio A22)** devices only. If you have an **MT8766** processor, see the [MT8766 disclaimer](../mt8766-disclaimer) before proceeding.
 ```''',
 }
