@@ -10,6 +10,7 @@ Guides, resources, and tips for living with the Xiaomi/Duoqin Qin F21 Pro.
 introduction
 hardware-variants
 software-variants
+mt8766-disclaimer
 guides/index
 ```
 

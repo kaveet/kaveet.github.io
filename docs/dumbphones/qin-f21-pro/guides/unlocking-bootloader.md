@@ -1,6 +1,6 @@
 # Unlocking the Bootloader
 
-{{ mt8766_warning }}
+{{ mt8766_warning_subdir }}
 
 ## Overview
 
@@ -8,12 +8,14 @@ Unlocking the bootloader enables advanced modifications including custom recover
 
 ```{admonition} What you'll accomplish
 - Unlock your device's bootloader for advanced modifications
-- Preserve device data during unlock (backup still recommended)
 - Prepare for rooting, custom ROMs, and other modifications
 ```
 
+```{warning}
+**Data Loss Risk:** Unlocking the bootloader may wipe all device data. While some users report successful unlocks without data loss, this is not guaranteed and appears device/firmware-specific. **Create a complete backup before proceeding.**
+```
 
-This guide uses [MTKClient](https://github.com/bkerler/mtkclient), an open-source tool for MediaTek-based devices. It unlocks the bootloader without erasing user data.
+This guide uses [MTKClient](https://github.com/bkerler/mtkclient), an open-source tool for MediaTek-based devices.
 
 ## Prerequisites
 

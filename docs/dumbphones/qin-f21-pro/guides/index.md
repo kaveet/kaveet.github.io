@@ -5,6 +5,7 @@
 ```{toctree}
 :maxdepth: 1
 
+boot-modes
 unlocking-bootloader
 rooting
 debloating
