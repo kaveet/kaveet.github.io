@@ -2,6 +2,12 @@
 
 {{ mt8766_warning }}
 
+```{image} images/f21-pro-reference.jpg
+:alt: Qin F21 Pro
+:width: 300px
+:align: center
+```
+
 ## Overview
 
 The Qin F21 Pro offers full smartphone capabilities in a feature phone form factor. The device runs Android 11 on the MediaTek Helio A22 (`mtk6761`) processor. It combines a 2.8-inch touchscreen and a physical T9-style keypad.
