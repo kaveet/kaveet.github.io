@@ -12,7 +12,7 @@ Unlocking the bootloader enables advanced modifications including custom recover
 ```
 
 ```{warning}
-**Data Loss Risk:** Unlocking the bootloader may wipe all device data. While some users report successful unlocks without data loss, this is not guaranteed and appears device/firmware-specific. **Create a complete backup before proceeding.**
+**Data Loss Risk:** Unlocking the bootloader will factory reset your device, erasing all data.
 ```
 
 This guide uses [MTKClient](https://github.com/bkerler/mtkclient), an open-source tool for MediaTek-based devices.
@@ -23,7 +23,7 @@ This guide uses [MTKClient](https://github.com/bkerler/mtkclient), an open-sourc
 - Python 3.9 or newer
 - USB drivers for MediaTek devices
 - Quality USB data cable
-- Developer Options enabled with OEM unlocking
+- Developer Options enabled with OEM unlocking (see below)
 
 ### Enable Developer Options
 
@@ -35,12 +35,32 @@ This guide uses [MTKClient](https://github.com/bkerler/mtkclient), an open-sourc
 
 ## Unlock Using MTKClient
 
-### Command Line Method
+::::{tab-set}
 
+:::{tab-item} GUI
+1. **Launch GUI:**
+   ```bash
+   python mtk_gui
+   ```
+
+2. **Power off device**
+
+3. **Navigate to "Flashing" tab → Click "Unlock Bootloader"**
+
+4. **Enter BROM mode:**
+   - Hold **Owl/Heart button** (top left) + **Back button**
+   - While holding, plug in USB cable
+   - Keep holding until device detected
+
+5. **Wait for completion, then reset device**
+:::
+
+:::{tab-item} CLI
 1. **Power off device completely**
 
-2. **Run unlock command** in MTKClient directory:
-   ```
+2. **Run unlock and factory reset commands** in MTKClient directory:
+   ```bash
+   python mtk e metadata,userdata,md_udc
    python mtk da seccfg unlock
    ```
 
@@ -51,29 +71,15 @@ This guide uses [MTKClient](https://github.com/bkerler/mtkclient), an open-sourc
 
 4. **Wait for completion** (10-30 seconds)
 
-   ```{note}
-   Some users need to reconnect USB multiple times. If stuck, disconnect and re-enter BROM mode.
-   ```
+   **Note:** Some users need to reconnect USB multiple times. If stuck, disconnect and re-enter BROM mode.
 
 5. **Reboot device:**
-   ```
+   ```bash
    python mtk reset
    ```
+:::
 
-### GUI Method
-
-1. **Launch GUI:**
-   ```
-   python mtk_gui
-   ```
-
-2. **Power off device**
-
-3. **Navigate to "Flashing" tab → Click "Unlock Bootloader"**
-
-4. **Enter BROM mode** (hold Owl/Heart + Back, plug USB)
-
-5. **Wait for completion, then reset device**
+::::
 
 ## Verification
 
@@ -89,25 +95,60 @@ This is completely normal and confirms successful unlock. Some Google Play pre-i
 
 ## Post-Unlock: Create Backup
 
-Create a complete backup before making modifications:
+Create a complete backup before making any modifications. You'll need about 5GB of free disk space:
 
-1. Power off device
-2. Launch GUI: `python mtk_gui`
-3. Enter BROM mode (hold Owl/Heart + Back, plug USB)
-4. Go to **"Read partition(s)"** tab
-5. Click **"Select all partitions"**
-6. Optionally uncheck **userdata** (encrypted personal data)
-7. Enable **"Dump GPT"**
-8. Click **"Read Partition(s)"** and choose save location
-9. Back up preloader from **"Flash Tools"** tab
+::::{tab-set}
 
-```{warning}
-**Critical Partition Warnings:**
-- **Never** copy `seccfg` between devices—each has unique security config
-- Flashing another device's `seccfg` will brick your phone
+:::{tab-item} GUI
+1. **Power off device**
 
-When restoring, erase these partitions first: `python mtk e seccfg,cache,metadata,userdata,md_udc`
-```
+2. **Launch GUI:**
+   ```bash
+   python mtk_gui
+   ```
+
+3. **Enter BROM mode** (hold Owl/Heart + Back, plug USB)
+
+4. **Go to "Read partition(s)" tab**
+
+5. **Click "Select all partitions"**
+
+6. **Optionally uncheck "userdata"** (encrypted personal data)
+
+7. **Enable "Dump GPT"**
+
+8. **Click "Read Partition(s)"** and choose save location
+
+   ![MTK GUI Backup Interface](../images/mtk-gui-backup.png)
+
+9. **Back up preloader** from "Flash Tools" tab
+:::
+
+:::{tab-item} CLI
+1. **Power off device**
+
+2. **Read all partitions** in MTKClient directory:
+   ```bash
+   python mtk rl backup --skip=userdata
+   ```
+
+   To include userdata (encrypted personal data):
+   ```bash
+   python mtk rl backup
+   ```
+
+3. **Enter BROM mode:**
+   - Hold **Owl/Heart button** (top left) + **Back button**
+   - While holding, plug in USB cable
+   - Keep holding until device detected
+
+4. **Wait for backup to complete**
+
+   Partitions will be saved to the `backup` directory in your MTKClient folder.
+:::
+
+::::
+
 
 ## Troubleshooting
 
